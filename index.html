@@ -1,128 +1,732 @@
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-12-18 Tue 00:20 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PSVITACHEATZ06</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="FinalCheat" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Finalcheat.GitHub.com : ">
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://orgmode.org/worg/style/worg.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
 
-    <title>Finalcheat</title>
-  </head>
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
 
-  <body>
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Finalcheat">View on GitHub</a>
 
-          <h1 id="project_title">Finalcheat</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>PSVITACHEAT Z05版</h3>
-
-<p>主要更新：</p>
-
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">PSVITACHEATZ06</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
 <ul>
-    <li>支持365系统</li>
-    <li>增加内存浏览页面查看eboot模块seg信息（右摇杆上推切换显示隐藏）</li>
-    <li>代码格式增加$B200</li>
-    <li>其他小调整</li>
+<li><a href="#org1425e1b">1. 界面</a></li>
+<li><a href="#org0ea77b9">2. 发布时间</a></li>
+<li><a href="#orge802a63">3. Z06版更新</a></li>
+<li><a href="#org4633155">4. 更新内容介绍</a>
+<ul>
+<li><a href="#org34f4962">4.1. 只支持3.65系统以上</a></li>
+<li><a href="#org43b657f">4.2. 增加支持suprx插件方式金手指</a></li>
+<li><a href="#org1a6a6a0">4.3. 使用双缓冲改善图像闪烁问题</a></li>
+<li><a href="#org7b6ab47">4.4. 更换字体文件，增加繁体中文界面</a></li>
+<li><a href="#org3780440">4.5. cheat文件编码从GBK转变为UTF8</a></li>
+<li><a href="#orge1c35ad">4.6. dump内存多生成同名.txt文件，记录进程所有的module信息以供金手指制作者使用</a></li>
+<li><a href="#orgf56f50a">4.7. 改进B2格式代码</a></li>
+<li><a href="#orgf11b7a7">4.8. 精准搜索搜索范围增加Auto选项</a></li>
+<li><a href="#orgd2d6993">4.9. 主界面显示游戏名称、剩余内存信息</a></li>
+<li><a href="#org0a2378e">4.10. 适配游戏分辨率不是960*544的显示</a></li>
 </ul>
-
-<h3>
-<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>下载</h3>
-
-<p>链接: <a href="https://pan.baidu.com/s/1FaLCiOZlqVy-bjrbXy9IGg" target="_blank">https://pan.baidu.com/s/1FaLCiOZlqVy-bjrbXy9IGg</a> 密码: e362</p>
-
-<h3>
-<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>安装</h3>
-
-<p>与Z04版本一样，将vitacheat.suprx复制到ux0:vitacheat目录下，vitacheat.skprx复制到ur0:vitacheat目录下，config.txt里添加：</p>
-
-<pre><code>*KERNEL
-ur0:vitacheat/vitacheat.skprx
-</code></pre>
-
-<p>以前安装过Z03版本的要删除config.txt文件的ALL配置</p>
-
-<pre><code><del>*ALL
-ux0:vitacheat/vitacheat.suprx
-</del></code></pre>
-
-<h3>
-<a id="format" class="anchor" href="#format" aria-hidden="true"><span class="octicon octicon-link"></span></a>$B200格式</h3>
-
-<pre><code>$B200 0000000X 00000000
-X=0或1，0代表seg0，1代表seg1
-B200后面跟着的代码格式全部变成相对偏移，base由程序获得（也就是内存页面显示的segX信息）
-</code></pre>
+</li>
+<li><a href="#org8e4fb4b">5. FAQ</a>
+<ul>
+<li><a href="#orgc0d347e">5.1. 为什么config配置了插件路径却没能呼出金手指插件？</a></li>
+<li><a href="#org7c0e31a">5.2. 为什么搜索不到数值？</a></li>
+<li><a href="#orgb06572c">5.3. 为什么插件呼出后CHEAT LIST为空？</a></li>
+<li><a href="#orgea56791">5.4. 为什么锁定了金手指代码没效果或者异常退出？</a></li>
+<li><a href="#org7d4f310">5.5. 为什么有些游戏金手指插件无法呼出？</a></li>
+<li><a href="#org665cf46">5.6. 为什么CHEAT LIST里代码组限制为50组？</a></li>
+<li><a href="#org63938c4">5.7. 指针搜索功能？</a></li>
+</ul>
+</li>
+<li><a href="#org30be539">6. Support or Contact</a></li>
+</ul>
+</div>
+</div>
 
 
-<p>主要用于解决不同版本地址发生偏移的情况。</p>
+<div id="outline-container-org1425e1b" class="outline-2">
+<h2 id="org1425e1b"><span class="section-number-2">1</span> 界面</h2>
+<div class="outline-text-2" id="text-1">
 
-<p>举例：伊苏树海（PCSH00181）的mai版跟vitamin版的地址就有偏移</p>
+<div class="figure">
+<p><img src="images/vitacheat_eng_main_menu.png" alt="vitacheat_eng_main_menu.png" />
+</p>
+</div>
 
-<pre><code># PCSH00181 伊苏树海-1.00-MAI5 by dask
 
-_V0 金钱MAX
-$A100 810C6872 0000BF00
-</code></pre>
+<div class="figure">
+<p><img src="images/vitacheat_simp_main_menu.png" alt="vitacheat_simp_main_menu.png" />
+</p>
+</div>
 
-<p>seg0:81000000-811F9188</p>
 
-<pre><code># PCSH00181 伊苏树海-1.00-vitamin by dask
+<div class="figure">
+<p><img src="images/vitacheat_trad_main_menu.png" alt="vitacheat_trad_main_menu.png" />
+</p>
+</div>
+</div>
+</div>
 
-_V0 金钱MAX
-$A100 810C68D2 0000BF00
-</code></pre>
+<div id="outline-container-org0ea77b9" class="outline-2">
+<h2 id="org0ea77b9"><span class="section-number-2">2</span> 发布时间</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+2018/12/25
+</p>
+</div>
+</div>
 
-<p>seg0:81000060-811F91E8</p>
+<div id="outline-container-orge802a63" class="outline-2">
+<h2 id="orge802a63"><span class="section-number-2">3</span> Z06版更新</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>只支持3.65系统以上</li>
+<li>增加支持suprx插件方式金手指</li>
+<li>使用双缓冲改善图像闪烁问题</li>
+<li>更换字体文件，增加繁体中文界面</li>
+<li>cheat文件编码从GBK转变为UTF8</li>
+<li>dump内存多生成同名.txt文件，记录进程所有的module信息以供金手指制作者使用</li>
+<li>改进B2格式代码</li>
+<li>精准搜索搜索范围增加Auto选项</li>
+<li>主界面显示游戏名称、剩余内存信息</li>
+<li>适配游戏分辨率不是960*544的显示</li>
+</ul>
+</div>
+</div>
 
-<p>可以用B格式的码解决上面这个问题</p>
+<div id="outline-container-org4633155" class="outline-2">
+<h2 id="org4633155"><span class="section-number-2">4</span> 更新内容介绍</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org34f4962" class="outline-3">
+<h3 id="org34f4962"><span class="section-number-3">4.1</span> 只支持3.65系统以上</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+没什么好说的，懒得去适配3.60系统了，要使用新版请升级系统，否则用回Z05版。
+</p>
+</div>
+</div>
 
-<pre><code># PCSH00181 伊苏树海-1.00 by dask
+<div id="outline-container-org43b657f" class="outline-3">
+<h3 id="org43b657f"><span class="section-number-3">4.2</span> 增加支持suprx插件方式金手指</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+普通作弊代码格式方式不够灵活，对于进阶者来说可能希望使用更灵活的插件方式编写作弊代码。
+</p>
 
-_V0 金钱MAX
-$B200 00000000 00000000
-$A100 000C6872 0000BF00
-</code></pre>
+<p>
+首先需要搭建PSV开发环境，此处略过不谈，可自行上网搜索解决。
+</p>
 
-<p>上面这个是seg0的例子，seg1的应用可以自己去尝试忍者龙剑传Σ2+，使用$B200可以做到欧中版（PCSB00294）和港中版（PCSG00157）代码通用</p>
+<p>
+然后来看<a target="_blank" href="https://pan.baidu.com/s/1OvTBuxV8JosCAsMdIYdSIw">Example</a>，最终幻想X高清版(PCSH00042)的修改，原作弊代码来自于<a target="_blank" href="http://www.speedfly.cn/19985.html">http://www.speedfly.cn/19985.html</a>
+</p>
 
-<h3><a id="pointersearch" class="anchor" href="#pointersearch" aria-hidden="true"><span class="octicon octicon-link"></span></a>实验性质的指针搜索功能</h3>
+<p>
+这里仅做移植演示，下面对重要的地方作说明，其他地方参考Example来修改即可。
+</p>
 
-<p>还没做完，只是探索可行性，做PC端会简单很多。</p>
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;"> * &#32467;&#26500;&#20307;&#20195;&#34920;&#19968;&#39033;&#20462;&#25913;</span>
+<span style="color: #2aa1ae;"> * {{language}}_name&#20195;&#34920;&#20462;&#25913;&#21517;&#31216;&#65292;vitacheat&#20250;&#26681;&#25454;&#33756;&#21333;&#35821;&#35328;&#36873;&#25321;&#30456;&#24212;&#30340;&#36873;&#39033; </span>
+<span style="color: #2aa1ae;"> * func&#26159;&#20989;&#25968;&#25351;&#38024;&#65292;&#20989;&#25968;&#20869;&#25191;&#34892;&#20462;&#25913;</span>
+<span style="color: #2aa1ae;"> **/</span>
+ <span style="color: #4f97d7; font-weight: bold;">typedef</span> <span style="color: #4f97d7; font-weight: bold;">struct</span> <span style="color: #ce537a; font-weight: bold;">vitacheatinfo</span>
+ <span style="color: #4f97d7;">{</span>
+     <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">english_name</span>;
+     <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">simplified_name</span>;
+     <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">traditional_name</span>;
+     <span style="color: #ce537a; font-weight: bold;">char</span>* <span style="color: #7590db;">japanese_name</span>;   <span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">&#26412;&#26469;&#24819;&#20570;&#26085;&#25991;&#33756;&#21333;&#30340;&#65292;&#27809;&#26102;&#38388;&#21482;&#33021;&#26242;&#26102;&#25918;&#24323;&#65292;&#36825;&#19968;&#39033;&#26242;&#26102;&#27809;&#29992; </span><span style="color: #2aa1ae; background-color: #292e34;">*/</span>
+     <span style="color: #ce537a; font-weight: bold;">uintptr_t</span> <span style="color: #7590db;">func</span>;
+ <span style="color: #4f97d7;">}</span> <span style="color: #ce537a; font-weight: bold;">vitacheatinfo</span>;
 
-<p><img src="images/pointersearch1.jpg" alt="pointer search config" /></p>
 
-<p><img src="images/pointersearch2.jpg" alt="pointer search result" /></p>
+ <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">  *  00. module name: ffx_phyreApp</span>
+<span style="color: #2aa1ae;">  *  path: ux0:/app/PCSH00042/ffx_phyreApp.self</span>
+<span style="color: #2aa1ae;">  *  vaddr: 0x81000000</span>
+<span style="color: #2aa1ae;">  *  memsz: 0x62af50</span>
+<span style="color: #2aa1ae;">  *  vaddr: 0x8162b000</span>
+<span style="color: #2aa1ae;">  *  memsz: 0x1dd283c</span>
+<span style="color: #2aa1ae;">  **/</span>
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+ <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">  * &#30001;module name&#33719;&#21462;module&#20449;&#24687;&#65292;&#36825;&#37324;&#30340;module name&#26159;ffx_phyreApp</span>
+<span style="color: #2aa1ae;">  **/</span>
+ <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">get_ffx_phyreApp_module</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">tai_module_info_t</span>* <span style="color: #7590db;">pt_module_info</span><span style="color: #4f97d7;">)</span>
+ <span style="color: #4f97d7;">{</span>
+     pt_module_info-&gt;size = <span style="color: #4f97d7; font-weight: bold;">sizeof</span><span style="color: #bc6ec5;">(</span>tai_module_info_t<span style="color: #bc6ec5;">)</span>;
+     <span style="color: #4f97d7; font-weight: bold;">return</span> taiGetModuleInfo<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">"ffx_phyreApp"</span>, pt_module_info<span style="color: #bc6ec5;">)</span>;
+ <span style="color: #4f97d7;">}</span>
 
-<p>有问题请联系<a href="mailto:finalcheat@gmail.com">finalcheat@gmail.com</a></p>
 
-      </section>
-    </div>
+ <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">  *</span>
+<span style="color: #2aa1ae;">  * Code Author: Dask</span>
+<span style="color: #2aa1ae;">  * Source: http://www.speedfly.cn/19985.html</span>
+<span style="color: #2aa1ae;">  *</span>
+<span style="color: #2aa1ae;">  * _V0 Max Gil After Using    =&gt;    _V0 Max Gil After Using</span>
+<span style="color: #2aa1ae;">  * $A100 811CD8C4 0000BF00    =&gt;    $B200 00000000 00000000</span>
+<span style="color: #2aa1ae;">  *                            =&gt;    $A100 001CD8C4 0000BF00</span>
+<span style="color: #2aa1ae;">  *</span>
+<span style="color: #2aa1ae;">  **/</span>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+ <span style="color: #4f97d7; font-weight: bold;">static</span> <span style="color: #ce537a; font-weight: bold;">SceUID</span> <span style="color: #7590db;">mgauUID</span> = -<span style="color: #a45bad;">1</span>;
 
-    
+ <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">  * CODE&#21306;&#20462;&#25913;</span>
+<span style="color: #2aa1ae;">  * &#38145;&#23450;/&#31105;&#29992; &#20999;&#25442;&#30340;&#26102;&#20505;&#20250;&#35843;&#29992;&#35813;&#20989;&#25968;</span>
+<span style="color: #2aa1ae;">  **/</span>
+ <span style="color: #4f97d7; font-weight: bold;">static</span> <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">max_gil_after_using</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">lock</span><span style="color: #4f97d7;">)</span>
+ <span style="color: #4f97d7;">{</span>
+     <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>lock<span style="color: #bc6ec5;">)</span>
+     <span style="color: #bc6ec5;">{</span>
+         <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">          * &#38145;&#23450; </span>
+<span style="color: #2aa1ae;">          **/</span>
+         <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>mgauUID &gt; <span style="color: #a45bad;">0</span><span style="color: #2d9574;">)</span>
+         <span style="color: #2d9574;">{</span>
+             <span style="color: #4f97d7; font-weight: bold;">return</span>;
+         <span style="color: #2d9574;">}</span>
+         <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">          * &#33719;&#21462;module&#20449;&#24687; </span>
+<span style="color: #2aa1ae;">          **/</span>
+         <span style="color: #ce537a; font-weight: bold;">tai_module_info_t</span> <span style="color: #7590db;">module_info</span>;
+         <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">ret</span> = get_ffx_phyreApp_module<span style="color: #2d9574;">(</span>&amp;module_info<span style="color: #2d9574;">)</span>;
+         <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>ret != <span style="color: #a45bad;">0</span><span style="color: #2d9574;">)</span>
+         <span style="color: #2d9574;">{</span>
+             <span style="color: #4f97d7; font-weight: bold;">return</span>;
+         <span style="color: #2d9574;">}</span>
 
-  </body>
+         <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">          * &#35774;&#32622;offset&#21644;value&#65292;&#23545;&#24212;</span>
+<span style="color: #2aa1ae;">          * $A100 001CD8C4 0000BF00</span>
+<span style="color: #2aa1ae;">          **/</span>
+         <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">uint32_t</span> <span style="color: #7590db;">offset</span> = <span style="color: #a45bad;">0x1CD8C4</span>;
+         <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">uint16_t</span> <span style="color: #7590db;">value</span> = <span style="color: #a45bad;">0xBF00</span>;
+
+         <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">          * &#35774;&#32622;&#21442;&#25968;&#35843;&#29992;taiInjectDataForUser&#20462;&#25913;&#20869;&#23384;</span>
+<span style="color: #2aa1ae;">          **/</span>
+         <span style="color: #ce537a; font-weight: bold;">tai_offset_args_t</span> <span style="color: #7590db;">args</span>;
+         args.size = <span style="color: #4f97d7; font-weight: bold;">sizeof</span><span style="color: #2d9574;">(</span>args<span style="color: #2d9574;">)</span>;
+         args.modid = module_info.modid;
+         args.segidx = <span style="color: #a45bad;">0</span>;
+         args.offset = offset;
+         args.source = &amp;value;
+         args.source_size = <span style="color: #4f97d7; font-weight: bold;">sizeof</span><span style="color: #2d9574;">(</span>value<span style="color: #2d9574;">)</span>;
+         <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">          * &#35760;&#24405;injectid&#65292;&#21518;&#38754;&#37322;&#25918;&#38656;&#35201; </span>
+<span style="color: #2aa1ae;">          **/</span>
+         mgauUID = taiInjectDataForUser<span style="color: #2d9574;">(</span>&amp;args<span style="color: #2d9574;">)</span>;
+     <span style="color: #bc6ec5;">}</span>
+     <span style="color: #4f97d7; font-weight: bold;">else</span>
+     <span style="color: #bc6ec5;">{</span>
+         <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">          * &#31105;&#29992;&#65292;&#23545;&#24212;CODE&#21306;&#20462;&#25913;&#36825;&#37324;&#38656;&#35201;"&#35299;&#38145;"&#37322;&#25918;&#20869;&#23384;&#65292;&#35753;&#31243;&#24207;&#20540;&#24674;&#22797;&#21407;&#20540; </span>
+<span style="color: #2aa1ae;">          **/</span>
+         <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>mgauUID &gt; <span style="color: #a45bad;">0</span><span style="color: #2d9574;">)</span>
+         <span style="color: #2d9574;">{</span>
+             taiInjectRelease<span style="color: #67b11d;">(</span>mgauUID<span style="color: #67b11d;">)</span>;
+             mgauUID = -<span style="color: #a45bad;">1</span>;
+         <span style="color: #2d9574;">}</span>
+     <span style="color: #bc6ec5;">}</span>
+ <span style="color: #4f97d7;">}</span>
+
+
+ <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">  * Code Author: Dask</span>
+<span style="color: #2aa1ae;">  * Source: http://www.speedfly.cn/19985.html</span>
+<span style="color: #2aa1ae;">  *</span>
+<span style="color: #2aa1ae;">  * _V0 All Item 99            =&gt;    _V0 All Item 99</span>
+<span style="color: #2aa1ae;">  * $4101 8262A76C 00002000    =&gt;    $B200 00000001 00000000</span>
+<span style="color: #2aa1ae;">  * $006F 00000002 00000001    =&gt;    $4101 00FFF76C 00002000</span>
+<span style="color: #2aa1ae;">  * $4001 8262A96C 00000063    =&gt;    $006F 00000002 00000001</span>
+<span style="color: #2aa1ae;">  * $006F 00000001 00000000    =&gt;    $4001 00FFF96C 00000063</span>
+<span style="color: #2aa1ae;">  *                            =&gt;    $006F 00000001 00000000</span>
+<span style="color: #2aa1ae;">  *</span>
+<span style="color: #2aa1ae;">  **/</span>
+
+ <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">  * DATA&#21306;&#20462;&#25913;</span>
+<span style="color: #2aa1ae;">  * &#38145;&#23450;/&#31105;&#29992; &#20999;&#25442;&#30340;&#26102;&#20505;&#20250;&#35843;&#29992;&#35813;&#20989;&#25968;</span>
+<span style="color: #2aa1ae;">  **/</span>
+ <span style="color: #4f97d7; font-weight: bold;">static</span> <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">all_item_99</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">lock</span><span style="color: #4f97d7;">)</span>
+ <span style="color: #4f97d7;">{</span>
+     <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #bc6ec5;">(</span>lock<span style="color: #bc6ec5;">)</span>
+     <span style="color: #bc6ec5;">{</span>
+         <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">          * &#33719;&#21462;module&#20449;&#24687; </span>
+<span style="color: #2aa1ae;">          **/</span>
+         <span style="color: #ce537a; font-weight: bold;">tai_module_info_t</span> <span style="color: #7590db;">module_info</span>;
+         <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">ret</span> = get_ffx_phyreApp_module<span style="color: #2d9574;">(</span>&amp;module_info<span style="color: #2d9574;">)</span>;
+         <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>ret != <span style="color: #a45bad;">0</span><span style="color: #2d9574;">)</span>
+         <span style="color: #2d9574;">{</span>
+             <span style="color: #4f97d7; font-weight: bold;">return</span>;
+         <span style="color: #2d9574;">}</span>
+         <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">          * &#33719;&#21462;kernel_module_info </span>
+<span style="color: #2aa1ae;">          **/</span>
+         <span style="color: #ce537a; font-weight: bold;">SceKernelModuleInfo</span> <span style="color: #7590db;">kernel_module_info</span> = <span style="color: #2d9574;">{</span><span style="color: #a45bad;">0</span><span style="color: #2d9574;">}</span>;
+         ret = sceKernelGetModuleInfo<span style="color: #2d9574;">(</span>module_info.modid, &amp;kernel_module_info<span style="color: #2d9574;">)</span>;
+         <span style="color: #4f97d7; font-weight: bold;">if</span> <span style="color: #2d9574;">(</span>ret != <span style="color: #a45bad;">0</span><span style="color: #2d9574;">)</span>
+         <span style="color: #2d9574;">{</span>
+             <span style="color: #4f97d7; font-weight: bold;">return</span>;
+         <span style="color: #2d9574;">}</span>
+         <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">          * &#33719;&#21462;seg1(&#20063;&#23601;&#26159;DATA&#21306;)&#30340;base </span>
+<span style="color: #2aa1ae;">          **/</span>
+         <span style="color: #ce537a; font-weight: bold;">SceKernelSegmentInfo</span>* <span style="color: #7590db;">seg1</span> = &amp;<span style="color: #2d9574;">(</span>kernel_module_info.segments<span style="color: #67b11d;">[</span><span style="color: #a45bad;">1</span><span style="color: #67b11d;">]</span><span style="color: #2d9574;">)</span>;
+         <span style="color: #ce537a; font-weight: bold;">uint16_t</span> <span style="color: #7590db;">value1</span> = <span style="color: #a45bad;">0x2000</span>;
+         <span style="color: #ce537a; font-weight: bold;">uint32_t</span> <span style="color: #7590db;">offset</span> = <span style="color: #a45bad;">0xFFF76C</span>;
+         <span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #2d9574;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">0</span>; i &lt; <span style="color: #a45bad;">0x6F</span>; ++i<span style="color: #2d9574;">)</span>
+         <span style="color: #2d9574;">{</span>
+             <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">              * &#23450;&#20301;&#21040;&#23454;&#38469;&#22320;&#22336; </span>
+<span style="color: #2aa1ae;">              **/</span>
+             <span style="color: #ce537a; font-weight: bold;">void</span>* <span style="color: #7590db;">addr</span> = seg1-&gt;vaddr + offset + i * <span style="color: #a45bad;">0x2</span>;
+             *<span style="color: #67b11d;">(</span><span style="color: #ce537a; font-weight: bold;">uint16_t</span>*<span style="color: #67b11d;">)</span>addr = value1;
+             value1 += <span style="color: #a45bad;">0x1</span>;
+         <span style="color: #2d9574;">}</span>
+         <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">uint8_t</span> <span style="color: #7590db;">value2</span> = <span style="color: #a45bad;">0x63</span>;
+         offset = <span style="color: #a45bad;">0xFFF96C</span>;
+         <span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #2d9574;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">0</span>; i &lt; <span style="color: #a45bad;">0x6F</span>; ++i<span style="color: #2d9574;">)</span>
+         <span style="color: #2d9574;">{</span>
+             <span style="color: #ce537a; font-weight: bold;">void</span>* <span style="color: #7590db;">addr</span> = seg1-&gt;vaddr + offset + i;
+             *<span style="color: #67b11d;">(</span><span style="color: #ce537a; font-weight: bold;">uint8_t</span>*<span style="color: #67b11d;">)</span>addr = value2;
+         <span style="color: #2d9574;">}</span>
+     <span style="color: #bc6ec5;">}</span>
+     <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">      * &#27880;&#24847;DATA&#21306;&#20462;&#25913;&#19981;&#38656;&#35201;&#35760;&#24405;injectid&#65292;&#20063;&#19981;&#38656;&#35201;&#24674;&#22797;&#21407;&#20540;&#65292;&#25152;&#20197;&#31105;&#29992;(lock=0)&#24773;&#20917;&#19981;&#38656;&#35201;&#32534;&#20889;&#20195;&#30721;</span>
+<span style="color: #2aa1ae;">      **/</span>
+ <span style="color: #4f97d7;">}</span>
+
+
+ <span style="color: #2aa1ae;">/**</span>
+<span style="color: #2aa1ae;">  * CHEAT LIST</span>
+<span style="color: #2aa1ae;">  * &#23450;&#20041;&#20316;&#24330;&#20195;&#30721;&#21517;&#31216;&#21644;&#23545;&#24212;&#19978;&#38754;&#30340;&#20989;&#25968;&#21363;&#21487;&#12290;</span>
+<span style="color: #2aa1ae;">  **/</span>
+ <span style="color: #4f97d7; font-weight: bold;">static</span> <span style="color: #ce537a; font-weight: bold;">vitacheatinfo</span> <span style="color: #7590db;">info</span><span style="color: #4f97d7;">[]</span> = <span style="color: #4f97d7;">{</span>
+     <span style="color: #bc6ec5;">{</span> .english_name = <span style="color: #2d9574;">"Max Gil After Using"</span>, .simplified_name = <span style="color: #2d9574;">"&#37329;&#38065;&#21464;&#21160;&#21518;MAX"</span>, 
+       .traditional_name = <span style="color: #2d9574;">"&#37329;&#37666;&#35722;&#21205;&#21518;MAX"</span>, .japanese_name = <span style="color: #2d9574;">"Max Gil After Using"</span>, 
+       .func = <span style="color: #2d9574;">(</span><span style="color: #ce537a; font-weight: bold;">uintptr_t</span><span style="color: #2d9574;">)</span>max_gil_after_using <span style="color: #bc6ec5;">}</span>,
+     <span style="color: #bc6ec5;">{</span> .english_name = <span style="color: #2d9574;">"All Item 99"</span>, .simplified_name = <span style="color: #2d9574;">"&#20840;&#36947;&#20855;99&#20010;"</span>, 
+       .traditional_name = <span style="color: #2d9574;">"&#20840;&#36947;&#20855;99&#20491;"</span>, .japanese_name = <span style="color: #2d9574;">"All Item 99"</span>, 
+       .func = <span style="color: #2d9574;">(</span><span style="color: #ce537a; font-weight: bold;">uintptr_t</span><span style="color: #2d9574;">)</span>all_item_99 <span style="color: #bc6ec5;">}</span>,
+     <span style="color: #bc6ec5;">{</span> .english_name = <span style="color: #a45bad;">NULL</span>, .simplified_name = <span style="color: #a45bad;">NULL</span>, 
+       .traditional_name = <span style="color: #a45bad;">NULL</span>, .japanese_name = <span style="color: #a45bad;">NULL</span>, 
+       .func = <span style="color: #a45bad;">0</span> <span style="color: #bc6ec5;">}</span>,
+ <span style="color: #4f97d7;">}</span>;
+</pre>
+</div>
+
+<p>
+重点就是上面的内容，其他要修改的地方就是把Example涉及到titleid都替换成自己要改的titleid。
+</p>
+
+<p>
+最后把源代码编译成{{titleid}}.suprx，放到ux0:vitacheat/plg目录下即可。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1a6a6a0" class="outline-3">
+<h3 id="org1a6a6a0"><span class="section-number-3">4.3</span> 使用双缓冲改善图像闪烁问题</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+对菜单进行操作需要刷新界面，在原图像内绘制会明显感受到闪烁，使用双缓冲后几乎感受不到闪烁，当然了内存占用也会增加一倍，如果申请不到足够内存则不使用双缓冲。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7b6ab47" class="outline-3">
+<h3 id="org7b6ab47"><span class="section-number-3">4.4</span> 更换字体文件，增加繁体中文界面</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+以前版本的中文字体使用的GBK编码，新版改为UNICODE，界面增加繁体中文，cheat文件支持英文、简体中文、繁体中文、日文、韩文。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3780440" class="outline-3">
+<h3 id="org3780440"><span class="section-number-3">4.5</span> cheat文件编码从GBK转变为UTF8</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+字体更换了，原来的cheat文件编码也跟着变化，所以之前的cheat文件需要重新保存为UTF8编码。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1c35ad" class="outline-3">
+<h3 id="orge1c35ad"><span class="section-number-3">4.6</span> dump内存多生成同名.txt文件，记录进程所有的module信息以供金手指制作者使用</h3>
+<div class="outline-text-3" id="text-4-6">
+<p>
+Z05版显示了EBOOT(大多数游戏的main module)的信息，目的是为了解决不同版本的游戏内存偏移问题，但是少部分游戏数值存在其他module，这次更新导出所有module信息。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf56f50a" class="outline-3">
+<h3 id="orgf56f50a"><span class="section-number-3">4.7</span> 改进B2格式代码</h3>
+<div class="outline-text-3" id="text-4-7">
+<p>
+Z05版新增的内容，当时只考虑到EBOOT，这次更新可以定位到其他module。
+</p>
+
+<pre class="example">
+$B2XX 0000000Y 00000000
+XX=module序号(从上面的同名.txt文件可知相应的module序号)
+Y=0或1，0代表seg0，1代表seg1
+</pre>
+
+<p>
+Z06更新了XX部分，兼容以前代码。
+</p>
+
+<p>
+由于module动态加载/卸载，通过序号定位module的方法依然不能100%保证到准确的module，最好的办法是写supx根据module name定位。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf11b7a7" class="outline-3">
+<h3 id="orgf11b7a7"><span class="section-number-3">4.8</span> 精准搜索搜索范围增加Auto选项</h3>
+<div class="outline-text-3" id="text-4-8">
+<p>
+选择Auto选项不用指定搜索范围，程序搜索所有的module和heap内存。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2d6993" class="outline-3">
+<h3 id="orgd2d6993"><span class="section-number-3">4.9</span> 主界面显示游戏名称、剩余内存信息</h3>
+<div class="outline-text-3" id="text-4-9">
+<p>
+插件主界面增加游戏名称、剩余内存信息显示，剩余内存等于3个值相加，单位是字节。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a2378e" class="outline-3">
+<h3 id="org0a2378e"><span class="section-number-3">4.10</span> 适配游戏分辨率不是960*544的显示</h3>
+<div class="outline-text-3" id="text-4-10">
+<p>
+少部分游戏分辨率不是960*544，导致插件的界面显示异常，这次更新修复大部分情况，少数界面如内存浏览更改适配麻烦未做修改。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8e4fb4b" class="outline-2">
+<h2 id="org8e4fb4b"><span class="section-number-2">5</span> FAQ</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgc0d347e" class="outline-3">
+<h3 id="orgc0d347e"><span class="section-number-3">5.1</span> 为什么config配置了插件路径却没能呼出金手指插件？</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>tai/config.txt文件通常有两个(ux0、ur0)，其中只有一个有效，确认更改的config文件正确(ux0优先于ur0)</li>
+<li>确认vitacheat.suprx放入正确的目录</li>
+<li>确认机器重启(所有skprx替换要生效都必须重启)</li>
+<li>其他原因</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7c0e31a" class="outline-3">
+<h3 id="org7c0e31a"><span class="section-number-3">5.2</span> 为什么搜索不到数值？</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>搜索类型不正确(比如道具数量通常是8bit，搜索类型却选择了32bit)</li>
+<li>搜索范围不正确，可适当的扩大范围，或者使用新版的Auto选项</li>
+<li>游戏里显示的值与游戏内实际存储的值不一致(比如Virtua Tennis 4分数显示的15、30，实际存储的却是1、2)</li>
+<li>其他原因</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb06572c" class="outline-3">
+<h3 id="orgb06572c"><span class="section-number-3">5.3</span> 为什么插件呼出后CHEAT LIST为空？</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>确认db目录有相应的{{titleid}}.psv文件</li>
+<li>确认{{titleid}}.psv文件没有语法错误(新版加载到语法错误的.psv文件会提示)</li>
+<li>其他原因</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgea56791" class="outline-3">
+<h3 id="orgea56791"><span class="section-number-3">5.4</span> 为什么锁定了金手指代码没效果或者异常退出？</h3>
+<div class="outline-text-3" id="text-5-4">
+<ul class="org-ul">
+<li>使用者游戏版本与金手指代码制作者的游戏版本不一致(NND和MAI，以前的很多代码没使用B2格式，NND与MAI格式能共用的少)</li>
+<li>使用者游戏版本号与金手指代码制作者的游戏版本号不一致(比如使用者游戏版本号1.05，制作者游戏版本号1.00)</li>
+<li>其他原因</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7d4f310" class="outline-3">
+<h3 id="org7d4f310"><span class="section-number-3">5.5</span> 为什么有些游戏金手指插件无法呼出？</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+少数游戏设计机制比较独特，导致无法正常兼容，暂时没时间精力去处理这部分问题。新版提供游戏启动时按L键不加载vitacheat.suprx。
+</p>
+</div>
+</div>
+<div id="outline-container-org665cf46" class="outline-3">
+<h3 id="org665cf46"><span class="section-number-3">5.6</span> 为什么CHEAT LIST里代码组限制为50组？</h3>
+<div class="outline-text-3" id="text-5-6">
+<p>
+50组已经能够包含绝大部分修改功能了，而且每组最多200行代码，总共50*200=10000行代码已经能够容纳足够多的修改。
+</p>
+</div>
+</div>
+<div id="outline-container-org63938c4" class="outline-3">
+<h3 id="org63938c4"><span class="section-number-3">5.7</span> 指针搜索功能？</h3>
+<div class="outline-text-3" id="text-5-7">
+<p>
+之前有打算过在vitacheat里面做指针搜索功能，实验过后发现虽然可行，但是很多麻烦的细节要处理，暂时没有时间精力去弄。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org30be539" class="outline-2">
+<h2 id="org30be539"><span class="section-number-2">6</span> Support or Contact</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+有问题请联系<a href="mailto:finalcheat@gmail.com">finalcheat@gmail.com</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: FinalCheat</p>
+<p class="date">Created: 2018-12-18 Tue 00:20</p>
+</div>
+</body>
 </html>
